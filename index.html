@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <div id="wrap">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="login.css">
+  <script src"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <title>Luci Chess</title>
+  <h1 class="container-fluid"><strong>Luci Chess</strong></h1>
+</head>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+
+<body>
+
+  <h3 class="container-fluid">
+    <label for="user">Username:</label>
+    <input type="text" class="form-control input-sm" id="user" name="user" style="width: 100%;"maxlength="15" type = "text" onkeypress= "return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode > 47 && event.charCode < 58)"><br>
+    <label for="pass" >Password:</label>
+    <input type="password" class="form-control input-sm" id="pass" name="pass" style="width: 100%;" maxlength="15" type = "text" onkeypress= "return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode > 47 && event.charCode < 58)"><br>
+    <button type="button" onclick="checkLogin()">Login</button>
+    <button type="button" onclick="signUp()">Sign Up</button>
+
+  </h3>
+  </div>
+
+</body>
+  <script>
+  
+  $( document ).ready(function() {
+    if(sessionStorage.getItem("user") && sessionStorage.getItem("elo") && sessionStorage.getItem("pass")){
+      $("body").load("room.html");
+    }
+  });
+
+  </script>
+  <script src="./login.js"></script>
+  <script src="custom.js"></script>
+</html>

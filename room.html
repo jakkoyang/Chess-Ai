@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="login.css">
+    
+  <script src="chess.js"></script>
+  <script src="./chessboard/js/chessboard-0.3.0.min.js"></script>
+  <link rel="stylesheet" href="./chessboard/css/chessboard-0.3.0.css">
+  <title>Luci Chess</title>
+
+</head>
+  
+<body>
+  <div id="wrap">
+  <h1 class="container-fluid"><strong>Luci Chess</strong></h1>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+  
+</body>
+
+<div id="board" style="width: 100%;"></div>
+
+<body>
+  <h3 class="container-fluid">
+      <div id="roomNumbers" style="padding-top: 10px;"></div>
+      <div id="state" style="padding-bottom: 7px;"></div>
+    
+      <button type="button" id="undo" onclick="startPieceUndo()">Undo</button>
+      <button type="button" id="forfeit" onclick="forfeitGame()">Forfeit</button>
+
+      <form>
+        
+        <label for="number" id="player" style="color: red;">You're not signed in</label>
+        <label for="number" id="elo" style="color: #00FF00;"></label>
+
+        <br id="lineBreak2">
+        
+        <input type="number" class="form-control" id="room" min="0" max="99" style="width: 100px; display: inline; vertical-align: middle;" onkeypress= "return (event.charCode > 47 && event.charCode < 58)">
+        
+        <button id="button" onclick="connect()">Connect</button>
+        
+        
+        <br id="lineBreak1">
+        <button type='button' id="ai" onclick='$("body").load("ai.html");'>Computer</button>
+        <label type='button'for="number" id="nawfal" style="padding-top: 15px; vertical-align: middle;">Nawfal AI</label>
+        <br>
+        <button type='button' id="custom" onclick='$("body").load("custom.html");'>Customize</button>
+        <label for="number" id="customize" style="padding-top: 7px; vertical-align: middle;">Custom CSS</label>
+        
+
+      </form>
+
+        
+      
+      
+      
+      <script>
+        
+        if(sessionStorage.getItem("user") != null){
+          document.getElementById("player").innerHTML = "Welcome! " + sessionStorage.getItem("user") + ", please choose a room to join, or face the AI";
+          document.getElementById("player").style = "color: white";
+          document.getElementById("elo").innerHTML = "ELO: " + sessionStorage.getItem("elo") + "";
+        }
+        forfeit = document.getElementById("forfeit");
+        forfeit.style.display = "none";
+        undo = document.getElementById("undo");
+        undo.style.display = "none";
+        
+      </script>
+    
+  </h3>
+  </div>
+  
+
+  <script src="./game.js"></script>
+  <script src="custom.js"></script>
+</body>
+</html>

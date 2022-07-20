@@ -1,0 +1,43 @@
+html {
+  background: #101010;  
+  background-image: url('logo.png');
+  background-repeat:no-repeat;
+  background-position: right top -30%;
+  background-size: auto;
+  
+}
+
+head {
+  padding: 10px;
+}
+#wrap{
+  
+  background: #101010;  
+  color: white;
+  border: 3px solid #3a3a3a;
+  padding: 0px;
+  letter-spacing: 1px;
+  filter: drop-shadow(0 0 0.75rem #3a3a3a);
+  width: 45vw;
+  border-radius: 7px;
+  min-width: 350px;
+  margin: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 70vh;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  
+}
+button {
+  border-radius: 4px;
+  background-color: #3a3a3a;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

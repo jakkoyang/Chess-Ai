@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="login.css">
+    <meta name="viewport" content="width=device-width">
+    <title>Nawfal Simulator</title>
+    <link rel="stylesheet" href="./chessboard/css/chessboard-0.3.0.css" />
+    <script src="stockfish.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="login.css">
+
+  <title>Luci Chess</title>
+    
+  </head>
+  <body>
+    <div id="wrap">
+    <h1 class="container-fluid"><strong>Luci Chess: Nawfal Simulator</strong></h1>
+
+      </body>
+
+      <div id="aiBoard" style="width: 100%;"></div>
+
+      <body>
+      <h3 class="container-fluid">
+
+    <div id="info">
+      <strong style=" vertical-align: middle;">Search depth:</strong> <input type="number" class="form-control" id="searchDepth" min="0" max="99" style="width: 100px; display: inline; vertical-align: middle; padding-top: 10px;" onkeypress= "return (event.charCode > 47 && event.charCode < 58)" value="3">
+      <p id="eval"><p>
+
+      <button id="ai" onclick="location.reload();">Back</button>
+
+    </div>
+
+    </h3>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="chess.js"></script>
+    <script src="ai.js"></script>
+    </div>
+  </body>
+  <script src="custom.js"></script>
+
+</html>

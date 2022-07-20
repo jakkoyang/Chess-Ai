@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="login.css">
+
+  <title>Luci Chess</title>
+
+</head>
+  <body>
+    <div id="wrap">
+    <h1 class="container-fluid"><strong>Luci Chess: Customizer</strong></h1>
+
+      <h3 class="container-fluid">
+      </body>
+        <input type="color" id="colorPicker" style="vertical-align: middle;" value="#a1a1a1">
+        <button id="colorChoose">Set Background Color</button>
+        <br>
+        <br>
+        <input type="color" id="boardWhite" style="vertical-align: middle;" value="#484848">
+        <input type="color" id="boardBlack" style="vertical-align: middle;" value="#181818">
+        <button id="boardChoose">Set Board Color</button>
+        <br>
+        <br>
+        <select name="theme" style="color: black; vertical-align: middle;" id="theme">
+          <option value="wikipedia">Wikipedia</option>
+          <option value="chess24">Chess24</option>
+          <option value="dilena">Dilena</option>
+          <option value="leipzig">Leipzig</option>
+          <option value="metro">Metro</option>
+          <option value="symbol">Symbol</option>
+          <option value="uscf">USCF</option>
+          <option value="alpha">Alpha</option>
+        </select>
+        <button id="setTheme">Set Theme</button>
+        <br>
+        <br>
+
+        
+      <body>
+
+      <button id="ai" onclick="location.reload();">Back</button>
+    </h3>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    </div>
+  </body>
+  <script>
+    
+    document.getElementById("colorChoose").addEventListener("click", function() {
+      
+      localStorage.setItem('color', document.getElementById("colorPicker").value);
+      loadColor(document.getElementById("colorPicker").value);
+    });
+    document.getElementById("boardChoose").addEventListener("click", function(){
+      localStorage.setItem('boardWhite', document.getElementById("boardWhite").value);
+      localStorage.setItem('boardBlack', document.getElementById("boardBlack").value);
+    });
+    document.getElementById("setTheme").addEventListener("click", function(){
+      localStorage.setItem('theme', document.getElementById("theme").value);
+    });
+
+  </script>
+  <script src="custom.js"></script>
+
+</html>
